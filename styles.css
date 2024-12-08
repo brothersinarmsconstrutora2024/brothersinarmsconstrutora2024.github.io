@@ -1,64 +1,109 @@
+/* Base Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
 }
 
+/* Hero Section */
 .hero {
-    background: linear-gradient(to bottom, #ff6600, #ff9933);
-    color: white;
     text-align: center;
-    padding: 50px 20px;
+    background: #f4f4f4;
+    padding: 20px;
+    position: relative;
 }
 
-.hero-content h1 {
+.hero h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
-.hero-content p {
+.hero p {
     font-size: 1.2em;
-    margin-bottom: 20px;
+    margin: 10px 0 20px;
 }
 
 .cta-button {
-    background: white;
-    color: #ff6600;
+    background: #ff6600;
+    color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
+    font-size: 1em;
 }
 
-.hero-image img {
+.hero-background img {
     width: 100%;
-    height: auto;
-    margin-top: 20px;
+    opacity: 0.8;
 }
 
-.faq {
+/* ROI Section */
+.roi-section {
+    background: #fff7e6;
     padding: 20px;
-    background: #f4f4f4;
+    text-align: center;
+}
+
+.roi-graph {
+    width: 60%;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.image-item {
+    width: 45%;
+    text-align: center;
+}
+
+.image-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.image-item h3 {
+    font-size: 1.5em;
+    margin: 10px 0 5px;
+}
+
+.image-item p {
+    font-size: 1em;
+}
+
+/* FAQ Section */
+.faq {
+    background: #f9f9f9;
+    padding: 20px;
 }
 
 .faq h2 {
     text-align: center;
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
-.faq-item {
-    margin-bottom: 15px;
+.faq-item h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
 }
 
+.faq-item p {
+    font-size: 1em;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background: #222;
     color: white;
-}
-
-footer a {
-    color: #ff9933;
-    text-decoration: none;
+    font-size: 0.9em;
 }
