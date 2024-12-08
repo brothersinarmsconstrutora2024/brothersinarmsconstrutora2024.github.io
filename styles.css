@@ -1,14 +1,14 @@
-/* Base Styling */
+/* Reset básico */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    background: #f4f4f4;
+    background-color: #f4f4f4;
     padding: 20px;
     position: relative;
 }
@@ -29,81 +29,83 @@ body {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1em;
+    display: inline-block;
 }
 
-.hero-background img {
-    width: 100%;
+.cta-button:hover {
+    background: #e55d00;
+}
+
+.background {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
     opacity: 0.8;
 }
 
-/* ROI Section */
-.roi-section {
-    background: #fff7e6;
-    padding: 20px;
-    text-align: center;
-}
-
-.roi-graph {
-    width: 60%;
-    margin: 10px auto;
-    border-radius: 5px;
-}
-
-/* Gallery Section */
-.gallery {
+/* Property Info Section */
+.property-info {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     padding: 20px;
-    justify-content: center;
+    background: #fff;
 }
 
-.image-item {
-    width: 45%;
+.property-details {
+    max-width: 300px;
     text-align: center;
 }
 
-.image-item img {
-    max-width: 100%;
+.property-image {
+    width: 100%;
     border-radius: 5px;
 }
 
-.image-item h3 {
-    font-size: 1.5em;
-    margin: 10px 0 5px;
-}
-
-.image-item p {
-    font-size: 1em;
-}
-
-/* FAQ Section */
-.faq {
-    background: #f9f9f9;
-    padding: 20px;
-}
-
-.faq h2 {
+/* ROI Section */
+.roi {
     text-align: center;
-    font-size: 2em;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.roi img {
+    max-width: 100%;
+    height: auto;
     margin-bottom: 20px;
 }
 
-.faq-item h3 {
-    font-size: 1.5em;
-    margin: 10px 0;
-}
-
-.faq-item p {
-    font-size: 1em;
-}
-
-/* Footer */
 footer {
     text-align: center;
     padding: 10px;
     background: #222;
     color: white;
-    font-size: 0.9em;
+}
+
+footer a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .property-info {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
 }
