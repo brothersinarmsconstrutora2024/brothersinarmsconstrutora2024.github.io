@@ -10,6 +10,7 @@ body {
     position: relative;
     background-color: #fff;
     padding: 20px;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -25,6 +26,7 @@ body {
     left: 0;
     z-index: 0;
     opacity: 0.8;
+    object-fit: cover;
 }
 
 .cta-button {
@@ -62,6 +64,14 @@ body {
     padding: 20px;
 }
 
+.responsive-graphic {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #ddd;
+}
+
 .contact {
     padding: 20px;
     background-color: #fff;
@@ -73,3 +83,4 @@ footer {
     background-color: #222;
     color: white;
 }
+
