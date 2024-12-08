@@ -1,32 +1,23 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
+/* Hero Section */
 .hero {
     text-align: center;
     position: relative;
-    background-color: #fff;
-    padding: 20px;
-    overflow: hidden;
+    background: url('images/background.jpg') no-repeat center center / cover;
+    padding: 60px 20px;
+    color: white;
+    height: 400px;
 }
 
 .hero-content {
     position: relative;
     z-index: 1;
-}
-
-.hero-image {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    opacity: 0.8;
-    object-fit: cover;
 }
 
 .cta-button {
@@ -40,46 +31,36 @@ body {
     font-weight: bold;
 }
 
-.property-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-}
-
+/* Property Details Section */
 .property-details {
-    flex: 1 1 calc(45% - 10px);
-    box-sizing: border-box;
-    margin: 10px;
+    text-align: center;
+    margin: 20px;
 }
 
 .property-image {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-}
-
-.roi {
-    text-align: center;
-    padding: 20px;
-}
-
-.responsive-graphic {
-    max-width: 80%;
-    height: auto;
-    margin: 0 auto;
+    width: 80%;
+    max-width: 500px;
+    margin: 10px auto;
     display: block;
-    border: 1px solid #ddd;
 }
 
-.contact {
-    padding: 20px;
-    background-color: #fff;
+/* Chart Section */
+.chart-section {
+    text-align: center;
+    margin: 20px;
 }
 
+.chart {
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background-color: #222;
     color: white;
 }
