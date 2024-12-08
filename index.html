@@ -4,46 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Florada das Laranjeiras</title>
-    <!-- Monitoramento do Vercel -->
-    <script defer src="https://vercel.com/marcelosilveira/speed-insights.js"></script>
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Vercel Speed Insights -->
+    <script src="/node_modules/@vercel/speed-insights/dist/speed-insights.js"></script>
+    <script>
+        SpeedInsights.init();
+    </script>
 </head>
 <body>
+    <!-- Hero Section -->
     <header class="hero">
-        <div class="hero-background">
-            <img src="background.png" alt="Fundo abstrato de fumaça laranja">
-        </div>
         <div class="hero-content">
-            <h1>Bem-vindo ao <br> Florada das Laranjeiras</h1>
+            <h1>Bem-vindo ao<br>Florada das Laranjeiras</h1>
             <p>Investimento seguro com alta valorização e potencial de renda passiva.</p>
             <a href="https://wa.me/5511986723965" class="cta-button">Agendar visita</a>
         </div>
+        <div class="hero-background">
+            <img src="images/background.jpg" alt="Fundo laranja do Florada das Laranjeiras">
+        </div>
     </header>
 
-    <section class="property-info">
-        <div class="image-container">
-            <img src="1.jpg" alt="Fachada do imóvel">
-            <p>Fachada do imóvel<br>2 quartos, cozinha americana, área total de 125m². Localizado em Cotia.</p>
+    <!-- ROI Section -->
+    <section class="roi-section">
+        <h2>Valorização e Retorno sobre Investimento</h2>
+        <div class="roi-content">
+            <img src="images/grafico.jpg" alt="Gráfico de valorização" class="roi-graph">
+            <p>
+                <strong>Valorização regional:</strong> A região tem apresentado uma valorização anual média de 5% a 6%.<br>
+                <strong>Comparação:</strong> Imóveis similares começaram em R$ 350 mil (2019) e hoje estão acima de R$ 425 mil (2023).<br>
+                <strong>Cenários de ROI:</strong><br>
+                <ul>
+                    <li><strong>Cenário 1:</strong> Aquisição por R$ 300 mil. Valorização esperada em 10 anos: R$ 600 mil. ROI total: 36%.</li>
+                    <li><strong>Cenário 2:</strong> Quitação por R$ 400 mil. Valorização esperada em 10 anos: R$ 650 mil. ROI total: 23%.</li>
+                </ul>
+            </p>
+            <a href="files/ROI_simulacoes.pdf" class="cta-button">Baixar Simulação Completa</a>
         </div>
-        <div class="image-container">
-            <img src="interior.jpg" alt="Espaço interno do imóvel">
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="image-item">
+            <img src="images/1.jpg" alt="Fachada do imóvel">
+            <h3>Fachada do imóvel</h3>
+            <p>2 quartos, cozinha americana, área total de 125m². Localizado em Cotia.</p>
+        </div>
+        <div class="image-item">
+            <img src="images/interior.jpg" alt="Interior do imóvel">
+            <h3>Interior do imóvel</h3>
             <p>Espaço integrado com possibilidade de acabamento personalizado, sob medida para seu gosto e conforto.</p>
         </div>
     </section>
 
-    <section class="valuation">
-        <h2>Valorização Regional</h2>
-        <img src="grafico.jpg" alt="Gráfico de valorização dos imóveis em Cotia">
-        <p>Com uma média de valorização anual entre 4% e 6%, a região de Cotia tem mostrado um grande potencial para investidores.</p>
-        <a href="ROI_simulacoes.pdf" download class="cta-button">Baixar Simulação Completa</a>
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-item">
+            <h3>O valor é negociável?</h3>
+            <p>Sim, o valor é preferencialmente à vista, mas podemos ajustá-lo de acordo com sua proposta.</p>
+        </div>
+        <div class="faq-item">
+            <h3>O imóvel já vem com acabamento?</h3>
+            <p>O acabamento é opcional e faz parte da negociação. Você pode personalizá-lo ao seu gosto.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Como agendar uma visita?</h3>
+            <p>Clique acima em 'Agendar visita' ou abaixo em 'WhatsApp' / 'E-mail' para contato direto.</p>
+        </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>Florada das Laranjeiras - Cotia, SP</p>
         <p>
-            <a href="https://wa.me/5511986723965">WhatsApp</a> | 
+            <a href="https://wa.me/5511986723965">WhatsApp</a> |
             <a href="mailto:brothersinarmsconstrutora@gmail.com">E-mail</a>
         </p>
     </footer>
 </body>
 </html>
+
