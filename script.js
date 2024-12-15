@@ -1,58 +1,86 @@
-// script.js
-
-// LinkedIn Insight Tag
-(function() {
-    var _linkedin_partner_id = "7942241";
+// Validação do Formulário
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("#contact-form");
+  
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+  
+      const name = document.querySelector("#name").value.trim();
+      const email = document.querySelector("#email").value.trim();
+      const phone = document.querySelector("#phone").value.trim();
+      const message = document.querySelector("#message").value.trim();
+      const consent = document.querySelector("#consent").checked;
+  
+      if (!name || !email || !phone || !consent) {
+        alert("Por favor, preencha todos os campos obrigatórios e aceite a política de privacidade.");
+        return;
+      }
+  
+      // Envio Simulado - Altere conforme integração real
+      alert(`Obrigado, ${name}! Sua mensagem foi enviada com sucesso.`);
+      form.reset();
+    });
+  });
+  
+  // Botão Flutuante do WhatsApp
+  document.addEventListener("DOMContentLoaded", function () {
+    const whatsappButton = document.createElement("a");
+    whatsappButton.href = "https://wa.me/5511986723965";
+    whatsappButton.className = "whatsapp-float";
+    whatsappButton.target = "_blank";
+    whatsappButton.innerHTML = `<img src="images/whatsapp-icon.png" alt="WhatsApp" style="width: 60px; height: 60px;">`;
+  
+    document.body.appendChild(whatsappButton);
+  });
+  
+  // Scroll Suave para Links Internos
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+  
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  });
+  
+  // Configuração do reCAPTCHA invisível
+  function onSubmit(token) {
+    document.getElementById("contact-form").submit();
+  }
+  
+  // Configuração do LinkedIn Insight Tag
+  (function () {
+    _linkedin_partner_id = "7942241";
     window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
     window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-
+  })();
+  
+  (function (l) {
+    if (!l) {
+      window.lintrk = function (a, b) { window.lintrk.q.push([a, b]) };
+      window.lintrk.q = []
+    }
     var s = document.getElementsByTagName("script")[0];
     var b = document.createElement("script");
     b.type = "text/javascript";
     b.async = true;
     b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
     s.parentNode.insertBefore(b, s);
-})();
-console.log("LinkedIn Insight Tag configurado!");
-
-// Google reCAPTCHA v3 invisível
-function onSubmit(token) {
-    document.getElementById("contact-form").submit();
-    console.log("reCAPTCHA verificado e formulário enviado!");
-}
-
-// Formulário de contato - validação básica e envio
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contact-form");
-
-    form.addEventListener("submit", function (e) {
-        e.preventDefault(); // Previne envio padrão
-        console.log("Tentando enviar o formulário...");
-
-        // Captura os valores do formulário
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const phone = document.getElementById("phone").value;
-        const message = document.getElementById("message").value;
-        const consent = document.getElementById("consent").checked;
-
-        // Validação simples
-        if (!name || !email || !phone) {
-            alert("Por favor, preencha os campos obrigatórios.");
-            return;
-        }
-
-        // Simulação de envio (pode ser substituído por envio via backend)
-        console.log("Enviando dados...");
-        console.log({
-            Nome: name,
-            Email: email,
-            Telefone: phone,
-            Mensagem: message,
-            Consentimento: consent ? "Aceito" : "Não aceito",
-        });
-
-        alert("Formulário enviado com sucesso!");
-        form.reset();
+  })(window.lintrk);
+  
+  // Google Analytics - Eventos
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-DPF2CKVY0X');
+  
+  document.querySelectorAll('.cta-btn, .btn-download').forEach(button => {
+    button.addEventListener("click", () => {
+      gtag('event', 'click', {
+        'event_category': 'CTA',
+        'event_label': button.textContent
+      });
     });
-});
+  });
+  
