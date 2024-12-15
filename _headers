@@ -1,79 +1,12 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
-}
+/* Segurança Básica e Redirecionamento */
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Content-Security-Policy: default-src 'self'; img-src 'self' https://*.google-analytics.com https://*.linkedin.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.google-analytics.com https://*.linkedin.com https://snap.licdn.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://*.google-analytics.com https://*.linkedin.com;
 
-.hero {
-    background-image: url('images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #002244; /* Azul escuro para máximo contraste */
-    text-align: center;
-    padding: 50px 20px;
-}
+/* Redirecionamento para HTTPS */
+https://*brothersinarmsconstrutora2024-github-io.vercel.app/*
+  X-Forwarded-Proto: https
 
-.hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #FF6200;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.property-details {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    text-align: center;
-}
-
-.property-details img {
-    max-width: 90%;
-    border-radius: 5px;
-}
-
-.graph-section {
-    text-align: center;
-    padding: 20px;
-}
-
-.graph-section img {
-    max-width: 80%;
-    height: auto;
-}
-
-.faq {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-top: 1px solid #ddd;
-}
-
-.faq h2 {
-    text-align: center;
-}
-
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.footer p {
-    margin: 5px 0;
-    text-align: center; /* Centraliza texto e links no footer */
-}
+/* Cache de Imagens e Estáticos */
+Cache-Control: public, max-age=31536000
