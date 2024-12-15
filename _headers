@@ -1,12 +1,23 @@
-/* Segurança Básica e Redirecionamento */
+/* Forçar redirecionamento HTTPS */
 Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-X-Content-Type-Options: nosniff
+
+/* Configuração de segurança */
 X-Frame-Options: DENY
-Content-Security-Policy: default-src 'self'; img-src 'self' https://*.google-analytics.com https://*.linkedin.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.google-analytics.com https://*.linkedin.com https://snap.licdn.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://*.google-analytics.com https://*.linkedin.com;
+X-Content-Type-Options: nosniff
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'self'; img-src 'self' https://*; script-src 'self' 'unsafe-inline' https://snap.licdn.com https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com;
 
-/* Redirecionamento para HTTPS */
-https://*brothersinarmsconstrutora2024-github-io.vercel.app/*
-  X-Forwarded-Proto: https
+/* Compressão GZIP */
+Content-Encoding: gzip
 
-/* Cache de Imagens e Estáticos */
-Cache-Control: public, max-age=31536000
+/* Cache para arquivos estáticos */
+# Imagens
+/images/* Cache-Control: public, max-age=31536000
+# CSS e JS
+/styles/* Cache-Control: public, max-age=31536000
+/scripts/* Cache-Control: public, max-age=31536000
+# PDFs
+/docs/* Cache-Control: public, max-age=31536000
+
+/* Redirecionamento automático para HTTPS */
+https://* https://%{HTTP_HOST}%{REQUEST_URI} 301!
