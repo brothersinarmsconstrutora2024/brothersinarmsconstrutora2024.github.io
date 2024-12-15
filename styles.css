@@ -1,79 +1,200 @@
-body {
+/* styles.css */
+
+/* Reset básico */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
-    color: #333;
     line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
 }
 
+/* Hero Section */
 .hero {
-    background-image: url('images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #002244; /* Azul escuro para máximo contraste */
+    background: url('images/background.jpg') no-repeat center center/cover;
+    color: #fff;
     text-align: center;
-    padding: 50px 20px;
+    padding: 100px 20px;
 }
 
-.hero-content h1 {
+.hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
-.hero-content p {
+.hero p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #FF6200;
-    color: white;
+    background-color: #ff7f00;
+    color: #fff;
     text-decoration: none;
+    padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
+    transition: background 0.3s;
 }
 
-.property-details {
+.cta-button:hover {
+    background-color: #e07000;
+}
+
+/* Seção de Imagens */
+.imovel-detalhes {
     display: flex;
     justify-content: space-around;
+    align-items: flex-start;
+    margin: 50px auto;
+    max-width: 1100px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.imagem {
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1 1 calc(50% - 40px);
+    max-width: 500px;
+}
+
+.imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.imagem p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+/* Gráfico */
+.grafico {
+    text-align: center;
+    margin: 50px auto;
     padding: 20px;
+    background: #fff;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grafico h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.grafico img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+.formulario {
+    background: #f4f4f4;
+    padding: 40px 20px;
     text-align: center;
 }
 
-.property-details img {
-    max-width: 90%;
+.formulario h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="tel"],
+.formulario button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.graph-section {
-    text-align: center;
-    padding: 20px;
+.formulario input[type="checkbox"] {
+    margin-right: 5px;
 }
 
-.graph-section img {
-    max-width: 80%;
-    height: auto;
-}
-
-.faq {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-top: 1px solid #ddd;
-}
-
-.faq h2 {
-    text-align: center;
-}
-
-.footer {
-    background-color: #333;
+.formulario button {
+    background-color: #ff7f00;
     color: #fff;
-    text-align: center;
-    padding: 10px 0;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.footer p {
-    margin: 5px 0;
-    text-align: center; /* Centraliza texto e links no footer */
+.formulario button:hover {
+    background-color: #e07000;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    background: #333;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ff7f00;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #e07000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .imovel-detalhes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagem {
+        flex: 1 1 100%;
+    }
+
+    .grafico {
+        padding: 10px;
+    }
+
+    .formulario form {
+        width: 100%;
+    }
 }
