@@ -3,81 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encontre sua casa dos sonhos em Cotia, com alto potencial de valorização. Agende sua visita e veja por que Florada das Laranjeiras é a escolha perfeita!">
+    <meta name="keywords" content="Casa em Cotia, valorização imobiliária, investimento, Florada das Laranjeiras, imóvel novo">
+    <meta name="author" content="Brothers in Arms Construtora">
     <title>Florada das Laranjeiras</title>
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Google Tag Manager -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPF2CKVY0X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-DPF2CKVY0X');
-    </script>
 
     <!-- LinkedIn Insight Tag -->
     <script type="text/javascript">
-      _linkedin_partner_id = "123456"; // Substitua pelo seu Partner ID do LinkedIn
-      window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-      window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-    </script>
-    <script type="text/javascript">
-      (function(l) {
-        if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}
-        var s = document.getElementsByTagName("script")[0];
-        var b = document.createElement("script");
-        b.type = "text/javascript";b.async = true;b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-        s.parentNode.insertBefore(b, s);
-      })(window.lintrk);
+        var _linkedin_partner_id = "7942241";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+        (function(l) {
+            if (!l) {
+                window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+                window.lintrk.q = [];
+            }
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript";
+            b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+        })(window.lintrk);
     </script>
     <noscript>
-      <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=123456&fmt=gif" />
+        <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7942241&fmt=gif" />
     </noscript>
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
+
 <body>
+    <!-- Hero Section -->
     <header class="hero">
-        <div class="hero-content">
-            <h1>Bem-vindo ao<br>Florada das Laranjeiras</h1>
-            <p>Investimento seguro com alta valorização e potencial de renda passiva.</p>
-            <a href="https://wa.me/5511986723965" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'Agendar Visita', 'event_label': 'Botao WhatsApp'});">Agendar visita</a>
-        </div>
+        <h1>Bem-vindo ao <br> <strong>Florada das Laranjeiras</strong></h1>
+        <p>Investimento seguro com alta valorização e potencial de renda passiva.</p>
+        <a href="#formulario" class="cta-button">Agendar Visita Agora</a>
     </header>
-    <main>
-        <section class="property-details">
-            <div class="details-left">
-                <img src="images/1.jpg" alt="Fachada do imóvel">
-                <p>Fachada do imóvel</p>
-                <p>2 quartos, cozinha americana, área total de 125m². Localizado em Cotia.</p>
-            </div>
-            <div class="details-right">
-                <img src="images/interior.jpg" alt="Espaço interno do imóvel">
-                <p>Espaço integrado com possibilidade de acabamento personalizado, sob medida para seu gosto e conforto.</p>
-            </div>
-        </section>
-        <section class="graph-section">
-            <h2>Valorização na Região</h2>
-            <img src="images/grafico.jpg" alt="Gráfico de valorização do imóvel">
-            <a href="images/ROI_simulacoes.pdf" class="cta-button" onclick="gtag('event', 'download', {'event_category': 'ROI Simulacoes', 'event_label': 'PDF Download'});">Baixar Simulação de Retorno</a>
-        </section>
-        <section class="faq">
-            <h2>Perguntas Frequentes</h2>
-            <div class="faq-item">
-                <h3>O imóvel pode ser negociado?</h3>
-                <p>Sim, o valor é negociável e o acabamento pode ser incluído como parte da negociação.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Como posso agendar uma visita?</h3>
-                <p>Clique acima em "Agendar visita" ou entre em contato diretamente pelo WhatsApp ou E-mail.</p>
-            </div>
-        </section>
-    </main>
+
+    <!-- Formulário de Contato -->
+    <section id="formulario" class="formulario">
+        <h2>Entre em Contato</h2>
+        <form id="contact-form" action="#" method="post">
+            <input type="text" id="name" placeholder="Nome completo" required>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="tel" id="phone" placeholder="Telefone" required>
+            <textarea id="message" placeholder="Sua mensagem (opcional)"></textarea>
+            <label>
+                <input type="checkbox" id="consent">
+                Aceito receber novidades e ofertas por e-mail
+            </label>
+            <button type="submit" class="cta-button" 
+                data-sitekey="SUA_CHAVE_SITE_RECAPTCHA" 
+                data-callback="onSubmit" 
+                data-action="submit">
+                Enviar Solicitação
+            </button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
     <footer class="footer">
         <p>Florada das Laranjeiras - Cotia, SP</p>
-        <p>
-            <a href="https://wa.me/5511986723965" onclick="gtag('event', 'click', {'event_category': 'Contato', 'event_label': 'WhatsApp Footer'});">WhatsApp</a> |
-            <a href="mailto:brothersinarmsconstrutora@gmail.com" onclick="gtag('event', 'click', {'event_category': 'Contato', 'event_label': 'Email Footer'});">E-mail</a>
-        </p>
+        <a href="https://wa.me/SEUNUMERO" target="_blank">WhatsApp</a> | 
+        <a href="mailto:brothersinarmsconstrutora@gmail.com">E-mail</a>
     </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
