@@ -12,9 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const consent = document.querySelector("#consent").checked;
   
       if (!name || !email || !phone || !consent) {
-        alert(
-          "Por favor, preencha todos os campos obrigatórios e marque a Política de Privacidade."
-        );
+        alert("Por favor, preencha todos os campos obrigatórios e aceite a política de privacidade.");
         return;
       }
   
@@ -30,29 +28,21 @@ document.addEventListener("DOMContentLoaded", function () {
     whatsappButton.href = "https://wa.me/5511986723965";
     whatsappButton.className = "whatsapp-float";
     whatsappButton.target = "_blank";
-    whatsappButton.innerHTML = `
-      <img src="images/whatsapp-icon.png" alt="WhatsApp">
-      <span>WhatsApp</span>
-    `;
+    whatsappButton.innerHTML = `<img src="images/whatsapp-icon.png" alt="WhatsApp">`;
   
     document.body.appendChild(whatsappButton);
   });
   
   // Scroll Suave para Links Internos
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
   
       document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth",
+        behavior: "smooth"
       });
     });
   });
-  
-  // Configuração do reCAPTCHA invisível
-  function onSubmit(token) {
-    document.getElementById("contact-form").submit();
-  }
   
   // Configuração do LinkedIn Insight Tag
   (function () {
@@ -60,35 +50,54 @@ document.addEventListener("DOMContentLoaded", function () {
     window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
     window._linkedin_data_partner_ids.push(_linkedin_partner_id);
   })();
+  
   (function (l) {
     if (!l) {
-      window.lintrk = function (a, b) {
-        window.lintrk.q.push([a, b]);
-      };
+      window.lintrk = function (a, b) { window.lintrk.q.push([a, b]); };
       window.lintrk.q = [];
     }
-    var s = document.getElementsByTagName("script")[0];
-    var b = document.createElement("script");
+    const s = document.getElementsByTagName("script")[0];
+    const b = document.createElement("script");
     b.type = "text/javascript";
     b.async = true;
     b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
     s.parentNode.insertBefore(b, s);
   })(window.lintrk);
   
-  // Google Analytics - Eventos
+  // Configuração do Google Analytics
   window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-  gtag("config", "G-DPF2CKVY0X");
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-DPF2CKVY0X');
   
-  // Rastreamento de Eventos - Botões CTA e Downloads
-  document.querySelectorAll(".cta-btn, .btn-download").forEach((button) => {
+  // Eventos Personalizados - Google Analytics
+  document.querySelectorAll('.cta-btn, .btn-download').forEach(button => {
     button.addEventListener("click", () => {
-      gtag("event", "click", {
-        event_category: "CTA",
-        event_label: button.textContent,
+      gtag('event', 'click', {
+        'event_category': 'CTA',
+        'event_label': button.textContent
       });
     });
   });
+  
+  // Animação de Entrada no Carregamento da Página
+  document.addEventListener("DOMContentLoaded", () => {
+    const heroTitle = document.querySelector(".hero-content h1");
+    const heroSubtitle = document.querySelector(".hero-content h2");
+  
+    if (heroTitle && heroSubtitle) {
+      heroTitle.style.opacity = "0";
+      heroSubtitle.style.opacity = "0";
+  
+      setTimeout(() => {
+        heroTitle.style.transition = "opacity 1.5s ease-in-out";
+        heroTitle.style.opacity = "1";
+      }, 500);
+  
+      setTimeout(() => {
+        heroSubtitle.style.transition = "opacity 1.5s ease-in-out";
+        heroSubtitle.style.opacity = "1";
+      }, 1000);
+    }
+  });
+  
