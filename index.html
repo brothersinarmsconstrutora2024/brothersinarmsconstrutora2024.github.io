@@ -9,41 +9,12 @@
   <title>Seu Novo Lar | Conforto e Valorização Garantidos</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
-  
-  <!-- LinkedIn Insight Tag -->
-  <script type="text/javascript">
-    _linkedin_partner_id = "7942241";
-    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-  </script>
-  <script type="text/javascript">
-    (function(l) {
-      if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
-      window.lintrk.q=[]}
-      var s = document.getElementsByTagName("script")[0];
-      var b = document.createElement("script");
-      b.type = "text/javascript";b.async = true;
-      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-      s.parentNode.insertBefore(b, s);})(window.lintrk);
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7942241&fmt=gif" />
-  </noscript>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPF2CKVY0X"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DPF2CKVY0X');
-  </script>
 </head>
 <body>
   <!-- Hero Section -->
   <header class="hero">
     <div class="hero-content">
-      <h1>Bem-vindo ao Florada das Laranjeiras</h1>
+      <h1>Bem-vindo ao <span>Florada das Laranjeiras</span></h1>
       <p>Investimento seguro com alta valorização e potencial de renda passiva.</p>
       <a href="https://wa.me/5511986723965" class="cta-btn">Agendar Visita Agora</a>
     </div>
@@ -56,11 +27,11 @@
   <section class="highlights">
     <div class="highlight">
       <img src="images/1.jpg" alt="Fachada do imóvel">
-      <p>2 quartos, cozinha americana, área total de 125m². Localizado em Cotia.</p>
+      <p>2 quartos, cozinha americana, área total de 125m².</p>
     </div>
     <div class="highlight">
       <img src="images/interior.jpg" alt="Interior do imóvel">
-      <p>Espaço integrado com possibilidade de acabamento personalizado, sob medida para seu gosto e conforto.</p>
+      <p>Espaço integrado com possibilidade de acabamento personalizado.</p>
     </div>
   </section>
 
@@ -74,8 +45,8 @@
   <!-- Formulário de Contato -->
   <section class="contact-form">
     <h3>Entre em Contato</h3>
-    <p>Preencha suas informações para agendar sua visita ou receber a planta baixa completa.</p>
-    <form action="https://formsubmit.co/brothersinarmsconstrutora@gmail.com" method="POST">
+    <p class="centralize">Preencha suas informações para agendar sua visita ou receber a planta baixa completa.</p>
+    <form action="https://formsubmit.co/brothersinarmsconstrutora@gmail.com" method="POST" id="contact-form">
       <label for="name">Nome Completo</label>
       <input type="text" id="name" name="name" required>
 
@@ -90,8 +61,8 @@
 
       <div class="consent">
         <input type="checkbox" id="consent" name="consent" required>
-        <label for="consent">Quero receber novidades e ofertas.</label>
-        <p><a href="politica.html" target="_blank">Política de Privacidade</a></p>
+        <label for="consent">Quero receber novidades e ofertas</label>
+        <p><a href="politica.html">Política de Privacidade</a></p>
       </div>
       <button type="submit" class="cta-btn">Quero saber mais</button>
     </form>
@@ -108,18 +79,22 @@
     </div>
   </section>
 
-  <!-- Botão WhatsApp Flutuante -->
+  <!-- Botão Flutuante do WhatsApp -->
   <div class="whatsapp-float">
     <a href="https://wa.me/5511986723965" target="_blank">
       <img src="images/whatsapp-icon.png" alt="WhatsApp">
-      <p>WhatsApp</p>
+      <span>WhatsApp</span>
     </a>
   </div>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2024 Florada das Laranjeiras | Cotia, SP</p>
-    <p>WhatsApp | E-mail</p>
+    <p>
+      <a href="https://wa.me/5511986723965">WhatsApp</a> |
+      <a href="mailto:brothersinarmsconstrutora@gmail.com">E-mail</a>
+    </p>
   </footer>
 </body>
 </html>
+
