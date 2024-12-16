@@ -1,22 +1,20 @@
-/*
-  Redirecionamento HTTPS e Segurança
-*/
-Strict-Transport-Security: max-age=31536000; includeSubDomains
-X-Content-Type-Options: nosniff
-X-Frame-Options: DENY
-Content-Security-Policy: default-src 'self'; img-src 'self' https://*; script-src 'self' 'unsafe-inline' https://snap.licdn.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self';
+/* Forçar HTTPS */
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
-/*
-  Redirecionamento de HTTP para HTTPS
-*/
-https://* 301
-
-/*
-  Headers de Cache
-*/
+/* Controle de Cache */
 Cache-Control: public, max-age=86400
 
-/*
-  Configurações de Meta e Política de Privacidade
-*/
-Link: <https://brothersinarmsconstrutora2024-github-io.vercel.app/politica.html>; rel="privacy-policy"
+/* Permitir X-Content-Type-Options */
+X-Content-Type-Options: nosniff
+
+/* Proteção XSS */
+X-XSS-Protection: 1; mode=block
+
+/* Política de Segurança de Conteúdo */
+Content-Security-Policy: default-src 'self'; script-src 'self' https://snap.licdn.com https://www.googletagmanager.com; img-src 'self' data: https://px.ads.linkedin.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://formsubmit.co https://www.google-analytics.com https://wa.me;
+
+/* Permissões de Referrer */
+Referrer-Policy: no-referrer-when-downgrade
+
+/* Headers para Melhor SEO */
+X-Frame-Options: DENY
