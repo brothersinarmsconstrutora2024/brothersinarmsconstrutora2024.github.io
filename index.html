@@ -9,57 +9,26 @@
   <title>Seu Novo Lar | Conforto e Valorização Garantidos</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
-  
-  <!-- LinkedIn Insight Tag -->
-  <script type="text/javascript">
-    _linkedin_partner_id = "7942241";
-    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-  </script>
-  <script type="text/javascript">
-    (function(l) {
-      if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
-      window.lintrk.q=[]}
-      var s = document.getElementsByTagName("script")[0];
-      var b = document.createElement("script");
-      b.type = "text/javascript";b.async = true;
-      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-      s.parentNode.insertBefore(b, s);})(window.lintrk);
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7942241&fmt=gif" />
-  </noscript>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPF2CKVY0X"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DPF2CKVY0X');
-  </script>
 </head>
 <body>
   <!-- Hero Section -->
   <header class="hero">
     <div class="hero-content">
-      <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Florada das Laranjeiras</h1>
-      <h2 style="color: white; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);">Investimento seguro com alto potencial de valorização</h2>
+      <h1 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Bem-vindo ao <br> Florada das Laranjeiras</h1>
+      <p style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);">Investimento seguro com alta valorização e potencial de renda passiva.</p>
       <a href="https://wa.me/5511986723965" class="cta-btn">Agendar Visita Agora</a>
     </div>
-    <div class="hero-bg">
-      <img src="images/background.jpg" alt="Fundo moderno e abstrato">
-    </div>
+    <img src="images/background.jpg" alt="Fundo abstrato moderno" width="1200" height="600" loading="lazy">
   </header>
 
   <!-- Destaques -->
   <section class="highlights">
     <div class="highlight">
-      <img src="images/1.jpg" alt="Fachada do imóvel">
+      <img src="images/1.jpg" alt="Fachada do imóvel" width="600" height="400" loading="lazy">
       <p>2 quartos, cozinha americana, área total de 125m². Localizado em Cotia.</p>
     </div>
     <div class="highlight">
-      <img src="images/interior.jpg" alt="Interior do imóvel">
+      <img src="images/interior.jpg" alt="Interior do imóvel" width="600" height="400" loading="lazy">
       <p>Espaço integrado com possibilidade de acabamento personalizado, sob medida para seu gosto e conforto.</p>
     </div>
   </section>
@@ -67,15 +36,15 @@
   <!-- Gráfico de valorização -->
   <section class="graph">
     <h3>Valorização de Imóveis na Região</h3>
-    <img src="images/grafico.jpg" alt="Gráfico de valorização de imóveis em Cotia">
+    <img src="images/grafico.jpg" alt="Gráfico de valorização de imóveis em Cotia" width="800" height="450" loading="lazy">
     <a href="docs/ROI_simulacoes.pdf" download class="btn-download">Baixe a Simulação de ROI</a>
   </section>
 
   <!-- Formulário de Contato -->
   <section class="contact-form">
     <h3>Entre em Contato</h3>
-    <p style="text-align: center;">Preencha suas informações para agendar sua visita ou receber a planta baixa completa.</p>
-    <form action="https://formsubmit.co/brothersinarmsconstrutora@gmail.com" method="POST">
+    <p>Preencha suas informações para agendar sua visita ou receber a planta baixa completa.</p>
+    <form id="contact-form" action="https://formsubmit.co/brothersinarmsconstrutora@gmail.com" method="POST">
       <label for="name">Nome Completo</label>
       <input type="text" id="name" name="name" required>
 
@@ -88,10 +57,10 @@
       <label for="message">Disponibilidade para visita</label>
       <textarea id="message" name="message" rows="3" placeholder="Ex: Segundas à tarde, quartas pela manhã"></textarea>
 
-      <div class="consent" style="text-align: center;">
+      <div class="consent">
         <input type="checkbox" id="consent" name="consent" required>
         <label for="consent">Quero receber novidades e ofertas</label>
-        <p><a href="politica.html" style="text-align: center;">Política de Privacidade</a></p>
+        <a href="politica.html" class="privacy-policy">Política de Privacidade</a>
       </div>
       <button type="submit" class="cta-btn">Quero saber mais</button>
     </form>
@@ -111,12 +80,12 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2024 Florada das Laranjeiras | Cotia, SP</p>
-    <p><a href="https://wa.me/5511986723965">WhatsApp</a> | <a href="mailto:brothersinarmsconstrutora@gmail.com">E-mail</a></p>
+    <p><a href="https://wa.me/5511986723965" target="_blank">WhatsApp</a> | <a href="mailto:brothersinarmsconstrutora@gmail.com">E-mail</a></p>
   </footer>
 
-  <!-- WhatsApp Botão Flutuante -->
+  <!-- Botão flutuante WhatsApp -->
   <a href="https://wa.me/5511986723965" class="whatsapp-float" target="_blank">
-    <img src="images/whatsapp-icon.png" alt="WhatsApp">
+    <img src="images/whatsapp-icon.png" alt="WhatsApp" width="60" height="60" loading="lazy">
   </a>
 </body>
 </html>
