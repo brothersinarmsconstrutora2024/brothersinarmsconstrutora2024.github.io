@@ -2,22 +2,19 @@
 Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
 /* Controle de Cache */
-Cache-Control: public, max-age=86400, immutable
+Cache-Control: public, max-age=86400
 
-/* Proteção de MIME e Conteúdo */
+/* Permitir X-Content-Type-Options */
 X-Content-Type-Options: nosniff
-Content-Security-Policy: default-src 'self'; 
-    script-src 'self' https://snap.licdn.com https://www.googletagmanager.com; 
-    img-src 'self' data: https://px.ads.linkedin.com; 
-    style-src 'self' 'unsafe-inline'; 
-    connect-src 'self' https://formsubmit.co https://www.google-analytics.com https://wa.me; 
-    frame-src 'self' https://www.youtube.com;
 
 /* Proteção XSS */
 X-XSS-Protection: 1; mode=block
 
+/* Política de Segurança de Conteúdo */
+Content-Security-Policy: default-src 'self'; script-src 'self' https://snap.licdn.com https://www.googletagmanager.com; img-src 'self' data: https://px.ads.linkedin.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://formsubmit.co https://www.google-analytics.com https://wa.me;
+
 /* Permissões de Referrer */
 Referrer-Policy: no-referrer-when-downgrade
 
-/* Segurança de Frame */
+/* Headers para Melhor SEO */
 X-Frame-Options: DENY
