@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Descubra o lar perfeito em uma região valorizada. Baixe a planta completa e agende sua visita.">
-  <meta name="keywords" content="Casa em Cotia, valorização imobiliária, Florada das Laranjeiras, investimento, imóvel novo">
-  <meta name="author" content="Brothers in Arms Construtora">
-  <title>Seu Novo Lar | Conforto e Valorização Garantidos</title>
+  <title>Florada das Laranjeiras</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -14,79 +11,52 @@
   <!-- Hero Section -->
   <header class="hero">
     <div class="hero-content">
-      <h1>Seu Novo Lar</h1>
-      <h2>Florada das Laranjeiras - Cotia, SP</h2>
-      <p>Oportunidade única com alto potencial de valorização.</p>
-      <a href="https://wa.me/5511986723965" class="cta-btn">Agendar Visita</a>
-    </div>
-    <div class="hero-bg">
-      <img src="images/background.jpg" alt="Fundo moderno e abstrato" width="1920" height="1080" loading="lazy">
+      <h1 class="hero-title">Florada das Laranjeiras</h1>
+      <p class="hero-subtitle">Oportunidade única com alto potencial de valorização</p>
+      <button class="cta-button">Agendar Visita</button>
     </div>
   </header>
 
-  <!-- Destaques -->
-  <section class="highlights">
-    <div class="highlight">
-      <img src="images/1.jpg" alt="Fachada do imóvel" width="400" height="300" loading="lazy">
-      <p>2 quartos, cozinha americana, área total de 125m². Localizado em Cotia.</p>
+  <!-- Valorização -->
+  <section class="valorizacao">
+    <h2 class="section-title">Valoriza&ccedil;&atilde;o de Im&oacute;veis na Regi&atilde;o</h2>
+    <div class="grafico-container">
+      <img src="images/chart.png" alt="Gráfico de valorização">
+      <button class="download-button">Baixe a Simula&ccedil;&atilde;o de ROI</button>
     </div>
-    <div class="highlight">
-      <img src="images/interior.jpg" alt="Interior do imóvel" width="400" height="300" loading="lazy">
-      <p>Espaço integrado com possibilidade de acabamento personalizado, sob medida para seu gosto e conforto.</p>
-    </div>
-  </section>
-
-  <!-- Gráfico de valorização -->
-  <section class="graph">
-    <h3>Valorização de Imóveis na Região</h3>
-    <img src="images/grafico.jpg" alt="Gráfico de valorização de imóveis em Cotia" width="600" height="400" loading="lazy">
-    <a href="docs/ROI_simulacoes.pdf" download class="btn-download">Baixe a Simulação de ROI</a>
   </section>
 
   <!-- Formulário de Contato -->
-  <section class="contact-form">
-    <h3>Entre em Contato</h3>
-    <p>Preencha suas informações para agendar sua visita ou receber a planta baixa completa.</p>
-    <form action="https://formsubmit.co/brothersinarmsconstrutora@gmail.com" method="POST">
-      <label for="name">Nome Completo</label>
-      <input type="text" id="name" name="name" required>
+  <section class="formulario">
+    <h2 class="section-title">Entre em Contato</h2>
+    <form id="contact-form" action="https://formsubmit.co/brothersinarmsconstrutora@gmail.com" method="POST">
+      <label for="nome">Nome Completo</label>
+      <input type="text" id="nome" name="nome" required>
 
       <label for="email">E-mail</label>
       <input type="email" id="email" name="email" required>
 
-      <label for="phone">Telefone</label>
-      <input type="tel" id="phone" name="phone" required>
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" name="telefone" required>
 
-      <label for="message">Disponibilidade para visita</label>
-      <textarea id="message" name="message" rows="3" placeholder="Ex: Segundas à tarde, quartas pela manhã"></textarea>
+      <label for="disponibilidade">Disponibilidade para visita</label>
+      <textarea id="disponibilidade" name="disponibilidade" rows="2"></textarea>
 
-      <div class="consent">
-        <input type="checkbox" id="consent" name="consent" required>
-        <label for="consent">Quero receber novidades e ofertas. <a href="politica.html">Política de Privacidade</a></label>
+      <div class="checkbox-container">
+        <input type="checkbox" id="novidades" name="novidades">
+        <label for="novidades" class="checkbox-label">
+          Quero receber novidades e ofertas.
+        </label>
+        <a href="politica.html" class="politica-link">Política de Privacidade</a>
       </div>
-      <button type="submit" class="cta-btn">Quero saber mais</button>
+
+      <button type="submit" class="submit-button">Quero saber mais</button>
     </form>
   </section>
 
-  <!-- Prova Social -->
-  <section class="testimonials">
-    <h3>O que nossos clientes dizem</h3>
-    <div class="testimonial">
-      <p>"Foi o melhor investimento da minha vida! Casa linda e pronta para morar." - João S.</p>
-    </div>
-    <div class="testimonial">
-      <p>"A equipe foi muito atenciosa e o imóvel tem um ótimo potencial de valorização." - Maria C.</p>
-    </div>
-  </section>
-
-  <!-- WhatsApp Floating Icon -->
-  <a href="https://wa.me/5511986723965" target="_blank" class="whatsapp-float">
-    <img src="images/whatsapp-icon.png" alt="WhatsApp" width="60" height="60" loading="lazy">
+  <!-- WhatsApp Icon -->
+  <a href="https://wa.me/5511987654321" class="whatsapp-float" target="_blank">
+    <img src="images/whatsapp-icon.png" alt="WhatsApp">
   </a>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Florada das Laranjeiras | Cotia, SP</p>
-  </footer>
 </body>
 </html>
