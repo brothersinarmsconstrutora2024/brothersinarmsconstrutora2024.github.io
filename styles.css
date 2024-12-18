@@ -1,50 +1,225 @@
-/* Reset básico */
+/* Estilos Gerais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  background: #000;
+  overflow: hidden;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h2 {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.cta-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Destaques */
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.highlight {
+  flex: 1 1 calc(50% - 2rem);
+  max-width: 600px;
+  text-align: center;
+}
+
+.highlight img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Gráfico */
+.graph {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.graph img {
+  max-width: 90%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.btn-download {
+  display: inline-block;
+  background-color: #28A745;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-download:hover {
+  background-color: #218838;
+}
+
+/* Formulário */
+.contact-form {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form .cta-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.contact-form .consent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form .consent label {
+  margin: 0;
+}
+
+/* Prova Social */
+.testimonials {
+  background-color: #f1f1f1;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.testimonial {
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+/* Botão Flutuante do WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+  animation: pulse 1.5s infinite;
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* Animação para botão pulante */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
+  50% {
+    transform: scale(1.1);
   }
-  
-  .hero {
-    position: relative;
-    text-align: center;
-    color: white;
+  100% {
+    transform: scale(1);
   }
-  
-  .hero-bg img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .cta-btn {
-    background: #007BFF;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-  }
-  
-  .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-    animation: bounce 1.5s infinite;
-  }
-  
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-  
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: #ccc;
+}
