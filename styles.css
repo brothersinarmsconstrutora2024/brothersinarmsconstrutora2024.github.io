@@ -1,130 +1,154 @@
-/* Geral */
+/* Reset básico */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
 }
 
-h1, h2 {
-  text-align: center;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+header {
+    background: url('background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Hero Section */
-.hero {
-  background: url('images/background.jpg') no-repeat center center/cover;
-  color: #fff;
-  text-align: center;
-  padding: 100px 20px;
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
-.hero-title {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-.hero-subtitle {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+header p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 .cta-button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Valorização */
-.valorizacao {
-  margin: 40px auto;
-  text-align: center;
+.cta-button:hover {
+    background-color: #0056b3;
 }
 
-.grafico-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+section {
+    padding: 20px;
 }
 
-.download-button {
-  background-color: #28a745;
-  color: white;
-  padding: 10px 15px;
-  margin-top: 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.grafico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Formulário */
-.formulario {
-  padding: 40px 20px;
+.grafico img {
+    margin: 10px 0;
+    max-width: 100%;
+    height: auto;
 }
 
-.formulario form {
-  max-width: 500px;
-  margin: auto;
+.roi-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
-form label {
-  display: block;
-  margin: 10px 0 5px;
+.roi-button:hover {
+    background-color: #218838;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
 }
 
 form input, form textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+    width: 80%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: vertical;
 }
 
 .checkbox-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 15px 0;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-container label {
+    margin-bottom: 5px;
 }
 
 .politica-link {
-  color: #007bff;
-  text-decoration: none;
-  font-size: 0.9em;
+    margin-top: 5px;
+    color: #007bff;
+    text-decoration: none;
 }
 
-.submit-button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: block;
-  margin: auto;
+.politica-link:hover {
+    text-decoration: underline;
 }
 
-/* WhatsApp Icon */
+form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
 .whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
 .whatsapp-float img {
-  width: 100%;
-  height: auto;
+    width: 50px;
+    height: 50px;
 }
