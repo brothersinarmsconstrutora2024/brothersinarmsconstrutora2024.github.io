@@ -4,17 +4,19 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 /* Controle de Cache */
 Cache-Control: public, max-age=86400
 
-/* Permitir X-Content-Type-Options */
-X-Content-Type-Options: nosniff
-
 /* Proteção XSS */
 X-XSS-Protection: 1; mode=block
 
 /* Política de Segurança de Conteúdo */
-Content-Security-Policy: default-src 'self'; script-src 'self'; img-src 'self' https://*; style-src 'self' 'unsafe-inline'; connect-src 'self';
+Content-Security-Policy: default-src 'self'; script-src 'self' https://snap.licdn.com https://www.googletagmanager.com; 
+img-src 'self' data: https://px.ads.linkedin.com; style-src 'self' 'unsafe-inline'; 
+connect-src 'self' https://formsubmit.co https://www.google-analytics.com https://wa.me;
 
 /* Permissões de Referrer */
 Referrer-Policy: no-referrer-when-downgrade
 
 /* Headers para Melhor SEO */
 X-Frame-Options: DENY
+
+/* Configuração de tipo de conteúdo */
+X-Content-Type-Options: nosniff
