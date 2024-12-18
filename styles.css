@@ -3,47 +3,47 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f9f9f9;
-  }
-  
-  header.hero {
+}
+
+header.hero {
     position: relative;
     text-align: center;
     color: #fff;
     overflow: hidden;
-  }
-  
-  header.hero .hero-bg img {
+}
+
+header.hero .hero-bg img {
     width: 100%;
     height: auto;
-  }
-  
-  header.hero .hero-content {
+}
+
+header.hero .hero-content {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-  }
-  
-  header.hero .hero-content h1 {
+}
+
+header.hero .hero-content h1 {
     font-size: 3rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-  }
-  
-  header.hero .hero-content h2 {
+}
+
+header.hero .hero-content h2 {
     font-size: 1.5rem;
     margin: 0.5rem 0;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-  }
-  
-  header.hero .hero-content a.cta-btn {
+}
+
+header.hero .hero-content a.cta-btn {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.8rem 2rem;
@@ -53,96 +53,97 @@
     text-decoration: none;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  }
-  
-  header.hero .hero-content a.cta-btn:hover {
+}
+
+header.hero .hero-content a.cta-btn:hover {
     background-color: #005bb5;
-  }
-  
-  section.highlights {
+}
+
+section.highlights {
     display: flex;
     justify-content: center;
     gap: 1rem;
     padding: 2rem 1rem;
-  }
-  
-  section.highlights .highlight {
+}
+
+section.highlights .highlight {
     text-align: center;
     max-width: 45%;
-  }
-  
-  section.highlights img {
+}
+
+section.highlights img {
     width: 100%;
     height: auto;
     margin-bottom: 0.5rem;
     border-radius: 5px;
-  }
-  
-  section.highlights p {
+}
+
+section.highlights p {
     font-size: 0.9rem;
     color: #555;
-  }
-  
-  section.graph {
+}
+
+section.graph {
     text-align: center;
     padding: 2rem;
-  }
-  
-  section.graph h3 {
+}
+
+section.graph h3 {
     margin-bottom: 1rem;
     font-size: 1.8rem;
-  }
-  
-  section.graph img {
+}
+
+section.graph img {
     max-width: 90%;
     height: auto;
     margin-bottom: 1rem;
-  }
-  
-  section.graph a.btn-download {
+}
+
+section.graph a.btn-download {
     display: inline-block;
     margin-top: 0.5rem;
     color: #0078ff;
     text-decoration: underline;
     font-weight: bold;
-  }
-  
-  section.contact-form {
+    font-size: 1.2rem; /* Aumentar o tamanho da fonte */
+}
+
+section.contact-form {
     text-align: center;
     padding: 2rem 1rem;
-  }
-  
-  section.contact-form h3 {
+}
+
+section.contact-form h3 {
     margin-bottom: 1rem;
     font-size: 1.8rem;
-  }
-  
-  section.contact-form form {
+}
+
+section.contact-form form {
     max-width: 600px;
     margin: 0 auto;
-  }
-  
-  section.contact-form label {
+}
+
+section.contact-form label {
     display: block;
     margin-top: 1rem;
     text-align: left;
-  }
-  
-  section.contact-form input,
-  section.contact-form textarea {
+}
+
+section.contact-form input,
+section.contact-form textarea {
     width: 100%;
     padding: 0.8rem;
     margin-top: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  section.contact-form textarea {
+}
+
+section.contact-form textarea {
     resize: none;
     height: 100px;
-  }
-  
-  section.contact-form button {
+}
+
+section.contact-form button {
     margin-top: 1rem;
     padding: 0.8rem 2rem;
     color: #fff;
@@ -151,78 +152,92 @@
     cursor: pointer;
     border-radius: 5px;
     font-size: 1rem;
-  }
-  
-  section.contact-form button:hover {
+}
+
+section.contact-form button:hover {
     background-color: #cc5b00;
-  }
-  
-  section.contact-form .consent {
+}
+
+section.contact-form .consent {
     margin-top: 1rem;
-  }
-  
-  section.contact-form .consent label {
+}
+
+section.contact-form .consent label {
     text-align: center;
     font-size: 0.9rem;
-  }
-  
-  section.testimonials {
+}
+
+section.testimonials {
     text-align: center;
     padding: 2rem;
-  }
-  
-  section.testimonials h3 {
+}
+
+section.testimonials h3 {
     margin-bottom: 1rem;
     font-size: 1.8rem;
-  }
-  
-  section.testimonials p {
+}
+
+section.testimonials p {
     font-size: 1rem;
     font-style: italic;
     color: #666;
-  }
-  
-  footer {
+}
+
+footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-  }
-  
-  footer p {
+}
+
+footer p {
     margin: 0.5rem 0;
-  }
-  
-  footer a {
+}
+
+footer a {
     color: #0078ff;
     text-decoration: none;
-  }
-  
-  footer a:hover {
+}
+
+footer a:hover {
     text-decoration: underline;
-  }
-  
-  /* WhatsApp Floating Logo */
-  .whatsapp-float {
+}
+
+/* WhatsApp Floating Logo */
+.whatsapp-float {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
     animation: bounce 1.5s infinite;
-  }
-  
-  .whatsapp-float img {
+}
+
+.whatsapp-float img {
     width: 60px;
     height: 60px;
-  }
-  
-  @keyframes bounce {
+}
+
+@keyframes bounce {
     0%, 100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
     50% {
-      transform: translateY(-10px);
+        transform: translateY(-10px);
     }
-  }
-  
-  
+}
+
+/* Botão CTA */
+.cta-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    color: #fff;
+    background-color: #0078ff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.cta-btn:hover {
+    background-color: #005bb5;
+}
