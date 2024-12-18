@@ -1,62 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Florada das Laranjeiras</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florada das Laranjeiras</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">Florada das Laranjeiras</h1>
-      <p class="hero-subtitle">Oportunidade única com alto potencial de valorização</p>
-      <button class="cta-button">Agendar Visita</button>
-    </div>
-  </header>
+    <!-- Header -->
+    <header>
+        <div class="hero">
+            <h1>Florada das Laranjeiras</h1>
+            <p>Oportunidade única com alto potencial de valorização</p>
+            <button class="cta-button">Agendar Visita</button>
+        </div>
+    </header>
 
-  <!-- Valorização -->
-  <section class="valorizacao">
-    <h2 class="section-title">Valoriza&ccedil;&atilde;o de Im&oacute;veis na Regi&atilde;o</h2>
-    <div class="grafico-container">
-      <img src="images/chart.png" alt="Gráfico de valorização">
-      <button class="download-button">Baixe a Simula&ccedil;&atilde;o de ROI</button>
-    </div>
-  </section>
+    <!-- Gráfico de Valorização -->
+    <section class="grafico">
+        <h2>Valorização de Imóveis na Região</h2>
+        <p>Gráfico de valorização</p>
+        <img src="grafico.png" alt="Gráfico de valorização" width="600" height="400" loading="lazy">
+        <button class="roi-button">Baixe a Simulação de ROI</button>
+    </section>
 
-  <!-- Formulário de Contato -->
-  <section class="formulario">
-    <h2 class="section-title">Entre em Contato</h2>
-    <form id="contact-form" action="https://formsubmit.co/brothersinarmsconstrutora@gmail.com" method="POST">
-      <label for="nome">Nome Completo</label>
-      <input type="text" id="nome" name="nome" required>
+    <!-- Formulário de Contato -->
+    <section class="contato">
+        <h2>Entre em Contato</h2>
+        <form action="https://formsubmit.co/your-email@example.com" method="POST">
+            <input type="text" name="name" placeholder="Nome Completo" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="tel" name="telefone" placeholder="Telefone" required>
+            <textarea name="mensagem" placeholder="Disponibilidade para visita"></textarea>
+            <div class="checkbox-container">
+                <label>
+                    <input type="checkbox" name="novidades">
+                    Quero receber novidades e ofertas
+                </label>
+            </div>
+            <button type="submit">Quero saber mais</button>
+            <a href="politica.html" class="politica-link">Política de Privacidade</a>
+        </form>
+    </section>
 
-      <label for="email">E-mail</label>
-      <input type="email" id="email" name="email" required>
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Florada das Laranjeiras | Cotia, SP</p>
+    </footer>
 
-      <label for="telefone">Telefone</label>
-      <input type="tel" id="telefone" name="telefone" required>
-
-      <label for="disponibilidade">Disponibilidade para visita</label>
-      <textarea id="disponibilidade" name="disponibilidade" rows="2"></textarea>
-
-      <div class="checkbox-container">
-        <input type="checkbox" id="novidades" name="novidades">
-        <label for="novidades" class="checkbox-label">
-          Quero receber novidades e ofertas.
-        </label>
-        <a href="politica.html" class="politica-link">Política de Privacidade</a>
-      </div>
-
-      <button type="submit" class="submit-button">Quero saber mais</button>
-    </form>
-  </section>
-
-  <!-- WhatsApp Icon -->
-  <a href="https://wa.me/5511987654321" class="whatsapp-float" target="_blank">
-    <img src="images/whatsapp-icon.png" alt="WhatsApp">
-  </a>
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5511987654321" class="whatsapp-float" target="_blank">
+        <img src="whatsapp-icon.png" alt="WhatsApp" width="50" height="50" loading="lazy">
+    </a>
 </body>
 </html>
