@@ -118,5 +118,33 @@
   <a href="https://wa.me/5511986723965" class="whatsapp-float" target="_blank">
     <img src="images/whatsapp-icon.png" alt="WhatsApp">
   </a>
+
+  <!-- Script de Tradução -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Observa mudanças no DOM
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === "childList") {
+            // Substituir textos do CAPTCHA e mensagens
+            const elements = document.querySelectorAll("div, span, p");
+            elements.forEach((el) => {
+              if (el.textContent.includes("CAPTCHA")) {
+                el.textContent = el.textContent.replace("CAPTCHA verification required", "Verificação CAPTCHA necessária");
+              }
+              if (el.textContent.includes("Form submitted successfully")) {
+                el.textContent = el.textContent.replace("Form submitted successfully", "Formulário enviado com sucesso");
+              }
+              if (el.textContent.includes("An error occurred")) {
+                el.textContent = el.textContent.replace("An error occurred", "Ocorreu um erro. Por favor, tente novamente.");
+              }
+            });
+          }
+        });
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
+    });
+  </script>
 </body>
 </html>
